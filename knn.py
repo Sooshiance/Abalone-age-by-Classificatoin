@@ -5,10 +5,10 @@ from sklearn.metrics import mean_squared_error
 # Load the data
 data = pd.read_csv("https://gist.github.com/Sooshiance/bdc297dc976039bf88dd99d2c0c5823b")
 
-# data = pd.read_csv("./data.csv")
+# data = pd.read_csv("./DataSet.csv")
 
 # Split the data into features and labels
-X = data.drop("Rings", axis=1)
+X = data.drop("Rings", axis=1, inplace=True)
 y = data["Rings"]
 
 # Encode the categorical feature (Sex) as numeric values
