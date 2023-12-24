@@ -3,9 +3,11 @@ import pandas as pd
 from sklearn.metrics import mean_squared_error
 
 # Load the data
-data = pd.read_csv("https://gist.github.com/Sooshiance/bdc297dc976039bf88dd99d2c0c5823b")
+# data = pd.read_csv("https://gist.github.com/Sooshiance/bdc297dc976039bf88dd99d2c0c5823b")
 
-# data = pd.read_csv("./DataSet.csv")
+column_names = ["Sex", "Length", "Diameter", "Height", "Whole weight", "Shucked weight", "Viscera weight", "Shell weight", "Rings"]
+
+data = pd.read_csv("./DataSet.csv", names=column_names)
 
 # Split the data into features and labels
 X = data.drop("Rings", axis=1, inplace=True)
