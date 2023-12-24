@@ -94,8 +94,8 @@ while not converged and iter < max_iter:
     # Assign the data points to the closest cluster
     clusters = clustering(X, centroids, k)
 
-# Save the current centroids
-old_centroids = centroids.copy()
+    # Save the current centroids
+    old_centroids = centroids.copy()
 
 # Update the centroids based on the cluster assignments
 centroids = update_centroids(X, clusters, k)
