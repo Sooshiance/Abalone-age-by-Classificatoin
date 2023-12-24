@@ -10,7 +10,7 @@ column_names = ["Sex", "Length", "Diameter", "Height", "Whole weight", "Shucked 
 data = pd.read_csv("./DataSet.csv", names=column_names)
 
 # Split the data into features and labels
-X = data.drop("Rings", axis=1, inplace=True)
+X = data.drop("Rings", axis=1)
 y = data["Rings"]
 
 # Encode the categorical feature (Sex) as numeric values
