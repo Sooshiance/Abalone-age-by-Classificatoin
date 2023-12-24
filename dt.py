@@ -4,9 +4,12 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 
 # Load the data set from the provided URL
-url = "https://gist.github.com/Sooshiance/bdc297dc976039bf88dd99d2c0c5823b"
+# url = "https://gist.github.com/Sooshiance/bdc297dc976039bf88dd99d2c0c5823b"
 # data = pd.read_csv(url)
-data = pd.read_csv('DataSet.csv')
+
+column_names = ["Sex", "Length", "Diameter", "Height", "Whole weight", "Shucked weight", "Viscera weight", "Shell weight", "Rings"]
+
+data = pd.read_csv("./DataSet.csv", names=column_names)
 
 # Split the data into features and target variable
 X = data.drop('Class', axis=1)
