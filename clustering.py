@@ -97,14 +97,14 @@ while not converged and iter < max_iter:
     # Save the current centroids
     old_centroids = centroids.copy()
 
-# Update the centroids based on the cluster assignments
-centroids = update_centroids(X, clusters, k)
+    # Update the centroids based on the cluster assignments
+    centroids = update_centroids(X, clusters, k)
 
-# Check the convergence
-converged = is_converged(old_centroids, centroids)
+    # Check the convergence
+    converged = is_converged(old_centroids, centroids)
 
-# Increment the number of iterations
-iter += 1
+    # Increment the number of iterations
+    iter += 1
 
 # Print the final centroids
 print(f"The final centroids are:\n{centroids}")
