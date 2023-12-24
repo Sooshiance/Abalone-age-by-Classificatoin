@@ -29,16 +29,12 @@ def knn(X, y, x_test, k):
     for i in range(len(X)):
         # Calculate the distance between the test point and the current example
         distance = euclidean_distance(x_test, X.iloc[i])
-        """
-        We can use a lambda function as well
-        distance = lambda x_test : 
-        """
 
-    # Append the distance and the label to the list
-    distances.append((distance, y.iloc[i]))
+        # Append the distance and the label to the list
+        distances.append((distance, y.iloc[i]))
 
-    # Sort the list by the distance
-    distances.sort(key=lambda x: x[0])
+        # Sort the list by the distance
+        distances.sort(key=lambda x: x[0])
 
     # Get the k nearest neighbors
     neighbors = distances[:k]
