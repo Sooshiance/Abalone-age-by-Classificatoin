@@ -60,8 +60,11 @@ def update_centroids(X, clusters, k):
 
     # Loop through all the clusters
     for i in range(k):
-        # Find the data points that belong to the current cluster
-        cluster_data = X[clusters == i]
+        try:
+            # Find the data points that belong to the current cluster
+            cluster_data = X[clusters == i]
+        except:
+            continue
 
     # Calculate the mean of the cluster data
     cluster_mean = cluster_data.mean()
